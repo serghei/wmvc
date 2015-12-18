@@ -30,7 +30,6 @@ class View
 		$is_post = ("POST" == $_SERVER["REQUEST_METHOD"]);
 
 		ob_start();
-		require_once "view-helper.php";
 		require dirname(__FILE__) . "/../tpl/{$this->__tpl}.php";
 
 		return ob_get_clean();
